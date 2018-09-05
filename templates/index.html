@@ -1,6 +1,7 @@
 
 {% extends "base.html" %}
-{% loads static %}
+
+{% load  static %}
 
 {% block content %}
 
@@ -87,7 +88,6 @@
       <div class="row">
         <div class="col-lg-7 col-md-7">
           <div class="container">
-            <img src="{% static 'img/face.png' %}">
           </div>
         </div>
         <div class="col-lg-5 col-md-5" id="instructon">
@@ -233,7 +233,7 @@
           <div class="container">
               <div class="row">
                  <div class="col-lg-6">
-                   <img src="img/face.png" class="img-fluid">
+                   <img src=" {% static 'img/face.png' %}" class="img-fluid">
                  </div>
                  <div class="col-lg-6">
                    <div class="row">
