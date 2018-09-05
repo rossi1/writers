@@ -30,6 +30,7 @@ class Rating(models.Model):
 class Orders(models.Model):
     order_id = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='order')
     num_of_orders_completed = models.IntegerField(default=0)
+    rating_writer = models.ForeignKey(Rating, on_delete=models.CASCADE, related_name='rate')
     orders_completed = models.BooleanField(default=False)
 
 
