@@ -22,20 +22,13 @@ class Rating(models.Model):
     rating_id = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='rating')
     reviews = models.IntegerField(default=0)
     rating = models.IntegerField(default=0)
+    num_of_orders_completed = models.IntegerField(default=0)
 
     def __str__(self):
         return str(self.reviews)
 
 
-class Orders(models.Model):
-    order_id = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='order')
-    num_of_orders_completed = models.IntegerField(default=0)
-    rating_writer = models.ForeignKey(Rating, on_delete=models.CASCADE, related_name='rate')
-    orders_completed = models.BooleanField(default=False)
 
-
-    def __str__(self):
-        return str(self.orders_completed)
 
     
 class Bids(models.Model):

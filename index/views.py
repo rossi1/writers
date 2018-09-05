@@ -3,7 +3,7 @@ from django.db.models import Max
 from django.contrib.auth import get_user_model
 from django.shortcuts import render
 
-from writers.models import WritersProfile, Rating, Orders
+from writers.models import WritersProfile, Rating
 
 
 
