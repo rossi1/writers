@@ -7,7 +7,7 @@ from .models import WritersProfile
 class WriterSignupForm(forms.ModelForm):
     class Meta:
         model = get_user_model()
-        exclude = ('is_writer', 'is_user')
+        fields = ('full_name', 'email', 'resume', 'topic_of_interest', 'resume', 'gender')
 
     def save(self, commit=True):
         instance = super(WriterSignupForm, self).save(commit=False)

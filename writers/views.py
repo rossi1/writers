@@ -11,7 +11,7 @@ from .models import WritersProfile
 
 class SignupView(CreateView):
     form_class = WriterSignupForm
-    fields = ['']
+    fields = ['email', 'full_name', 'topic_of_interest',  'resume']
     success_url = reverse_lazy('account-success-signup')
     template_name = ''
 
